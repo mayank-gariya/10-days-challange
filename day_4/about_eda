@@ -1,0 +1,96 @@
+# Customer Shopping Behavior Analysis
+
+> A data cleaning, preprocessing, EDA, and feature selection project on customer shopping behavior data.
+
+## Project Overview
+
+This project analyzes a customer shopping behavior dataset to understand patterns in customer activity, clean raw data, perform preprocessing, and identify the most important features for analysis and modeling.
+
+The goal of this project is to prepare messy raw data into a clean, analysis-ready dataset and extract meaningful insights that can support business decision-making.
+
+## Objectives
+
+- Clean and standardize the raw dataset.
+- Handle missing values, duplicates, and inconsistent formats.
+- Perform exploratory data analysis (EDA).
+- Engineer useful features from raw columns.
+- Select the most relevant features.
+- Summarize insights from customer shopping patterns.
+
+## Dataset
+
+- **Dataset name:** customer_shopping_behavior.csv 
+- **Source:** Kaggle
+- **Type:** Tabular dataset
+- **Target variable:** [`category`,`gender`, `Purchased`, `net_sale`, `Customer Segment`]
+
+## Tools and Libraries
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+
+## Project Workflow
+
+### 1. Data Loading
+- Loaded the raw dataset into Pandas.
+- Checked shape, data types, and column names.
+
+### 2. Data Cleaning
+- Removed duplicates.
+- Handled missing values.
+- Fixed inconsistent text formatting.
+- Converted columns to proper data types.
+- Treated outliers where needed.
+
+### 3. Data Preprocessing
+- Encoded categorical variables.
+- Scaled numerical features if required.
+- Prepared the data for analysis and feature selection.
+
+### 4. Exploratory Data Analysis
+- Analyzed distributions of numerical variables.
+- Studied category frequencies.
+- Checked relationships between features and target.
+- Used visualizations to identify patterns.
+
+### 5. Feature Engineering
+- Created new useful variables from existing columns.
+- Transformed date, time, or behavioral columns into meaningful features.
+
+### 6. Feature Selection
+- Removed redundant and low-value features.
+- Used statistical or model-based methods to identify the most important columns.
+- Kept only the features that contribute most to the analysis.
+
+
+## Results
+
+This project produced a cleaned and structured dataset that is ready for modeling or deeper business analysis. The selected features improved interpretability and reduced noise in the dataset.
+
+## How to Run
+
+1. Clone the repository.
+2. Install required libraries.
+3. Open the notebook.
+4. Run all cells from top to bottom.
+
+## Future Work
+
+- Build a prediction model.
+- Compare multiple feature selection methods.
+- Create a dashboard for business insights.
+- Test more advanced preprocessing techniques.
+
+## Conclusion
+
+This project demonstrates practical skills in data cleaning, preprocessing, EDA, feature engineering, and feature selection using a real-world customer shopping behavior dataset.
+
+## Contact
+
+- **Name:** [mayank]
+- **LinkedIn:** [www.linkedin.com/in/mayank-564124401]
+- **Email:** [mayankgariya482@gamil.com]
