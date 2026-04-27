@@ -2,96 +2,96 @@
 
 # defining parent class account 
 
-# class Account:
-#     def __init__(self, name, balance):
-#         self.name = name
-#         self._balance = balance   # encapsulated
-#         self.transactions = []
+class Account:
+    def __init__(self, name, balance):
+         self.name = name
+        self._balance = balance   # encapsulated
+        self.transactions = []
 
-#     def deposit(self, amount):
-#         if amount <= 0:
-#             print("Invalid deposit amount")
-#             return
+    def deposit(self, amount):
+        if amount <= 0:
+            print("Invalid deposit amount")
+            return
         
-#         self._balance += amount
-#         self.transactions.append(f"Deposited: {amount}")
-#         print(f"{amount} deposited successfully")
+        self._balance += amount
+        self.transactions.append(f"Deposited: {amount}")
+        print(f"{amount} deposited successfully")
 
-#     def withdraw(self, amount):
-#         if amount <= 0:
-#             print("Invalid withdrawal amount")
-#             return
+    def withdraw(self, amount):
+        if amount <= 0:
+            print("Invalid withdrawal amount")
+            return
         
-#         if amount > self._balance:
-#             print("Insufficient balance")
-#             return
+        if amount > self._balance:
+            print("Insufficient balance")
+            return
         
-#         self._balance -= amount
-#         self.transactions.append(f"Withdrawn: {amount}")
-#         print(f"{amount} withdrawn successfully")
+        self._balance -= amount
+        self.transactions.append(f"Withdrawn: {amount}")
+        print(f"{amount} withdrawn successfully")
 
-#     def get_balance(self):
-#         return self._balance
+    def get_balance(self):
+        return self._balance
 
-#     def show_transactions(self):
-#         print(f"\nTransaction history for {self.name}:")
-#         for t in self.transactions:
-#             print(t)
+    def show_transactions(self):
+        print(f"\nTransaction history for {self.name}:")
+        for t in self.transactions:
+            print(t)
             
-# # inheretance
-# # children classes
+# inheretance
+# children classes
 
-# class SavingsAccount(Account):
-#     MIN_BALANCE = 1000
+class SavingsAccount(Account):
+    MIN_BALANCE = 1000
 
-#     def withdraw(self, amount):
-#         if amount <= 0:
-#             print("Invalid withdrawal amount")
-#             return
+    def withdraw(self, amount):
+        if amount <= 0:
+            print("Invalid withdrawal amount")
+            return
         
-#         if self._balance - amount < self.MIN_BALANCE:
-#             print("Cannot withdraw: Minimum balance requirement violated")
-#             return
+        if self._balance - amount < self.MIN_BALANCE:
+            print("Cannot withdraw: Minimum balance requirement violated")
+            return
         
-#         self._balance -= amount
-#         self.transactions.append(f"Withdrawn: {amount}")
-#         print(f"{amount} withdrawn successfully (Savings)")
+        self._balance -= amount
+        self.transactions.append(f"Withdrawn: {amount}")
+        print(f"{amount} withdrawn successfully (Savings)")
         
         
-# class CurrentAccount(Account):
-#     OVERDRAFT_LIMIT = 5000
+class CurrentAccount(Account):
+    OVERDRAFT_LIMIT = 5000
 
-#     def withdraw(self, amount):
-#         if amount <= 0:
-#             print("Invalid withdrawal amount")
-#             return
+    def withdraw(self, amount):
+        if amount <= 0:
+            print("Invalid withdrawal amount")
+            return
         
-#         if self._balance - amount < -self.OVERDRAFT_LIMIT:
-#             print("Overdraft limit exceeded")
-#             return
+        if self._balance - amount < -self.OVERDRAFT_LIMIT:
+            print("Overdraft limit exceeded")
+            return
         
-#         self._balance -= amount
-#         self.transactions.append(f"Withdrawn: {amount}")
-#         print(f"{amount} withdrawn successfully (Current)")
+        self._balance -= amount
+        self.transactions.append(f"Withdrawn: {amount}")
+        print(f"{amount} withdrawn successfully (Current)")
         
         
         
-# # Create accounts
-# savings = SavingsAccount("Albert", 5000)
-# current = CurrentAccount("John", 2000)
+# Create accounts
+savings = SavingsAccount("Albert", 5000)
+current = CurrentAccount("John", 2000)
 
-# # Test Savings
-# savings.deposit(1000)
-# savings.withdraw(4500)   # should fail (min balance)
-# savings.withdraw(3000)
-# print("Savings Balance:", savings.get_balance())
-# savings.show_transactions()
+# Test Savings
+savings.deposit(1000)
+savings.withdraw(4500)   # should fail (min balance)
+savings.withdraw(3000)
+print("Savings Balance:", savings.get_balance())
+savings.show_transactions()
 
-# # Test Current
-# current.withdraw(6000)   # allowed (overdraft)
-# current.withdraw(2000)   # may exceed limit
-# print("Current Balance:", current.get_balance())
-# current.show_transactions()
+# Test Current
+current.withdraw(6000)   # allowed (overdraft)
+current.withdraw(2000)   # may exceed limit
+print("Current Balance:", current.get_balance())
+current.show_transactions()
 
 
 # project-2 library management 
